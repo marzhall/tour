@@ -5,7 +5,7 @@ package main
 import "fmt"
 
 func main() {
-	var s []int
+	var s, y []int
 	printSlice(s)
 
 	// append works on nil slices.
@@ -18,6 +18,11 @@ func main() {
 
 	// We can add more than one element at a time.
 	s = append(s, 2, 3, 4)
+	printSlice(s)
+
+	// We can also append two slices using the `...` notation.
+	y = append(y, 5, 6)
+	s = append(s, y...)
 	printSlice(s)
 }
 
