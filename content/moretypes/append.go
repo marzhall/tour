@@ -20,7 +20,7 @@ func main() {
 	s = append(s, 2, 3, 4)
 	printSlice(s)
 
-	// We can also append two slices using the `...` notation.
+	// We can also combine two slices by using append and the `...` notation.
 	y = append(y, 5, 6)
 	s = append(s, y...)
 	printSlice(s)
