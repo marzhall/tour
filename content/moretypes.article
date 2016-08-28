@@ -224,7 +224,9 @@ array will be allocated. The returned slice will point to the newly allocated
 array.
 
 If two slices need to be appended, the syntactic sugar `...` can be used to 
-expand the second slice into a list of arguments, like so: `append(s, y...)`
+expand the second slice into a list of arguments:
+
+	append(s, y...) // the same as append(s, y[0], y[1])
 
 (To learn more about slices, read the [[https://blog.golang.org/go-slices-usage-and-internals][Slices: usage and internals]] article.)
 
